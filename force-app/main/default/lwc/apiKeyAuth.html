@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="API Key Authentication" icon-name="action:lock">
+        <lightning-input label="Enter API Key" value={apiKey} onchange={handleApiKeyChange}></lightning-input>
+        <lightning-button label="Authenticate" onclick={handleAuthenticate}></lightning-button>
+
+        <template if:true={errorMessage}>
+            <p style="color:red;">{errorMessage}</p>
+        </template>
+    </lightning-card>
+</template>
