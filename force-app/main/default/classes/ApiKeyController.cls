@@ -4,7 +4,8 @@ public with sharing class ApiKeyController {
         try {
             Http http = new Http();
             HttpRequest request = new HttpRequest();
-            request.setEndpoint('https://external-api.com/verify'); // Replace with actual API URL
+            
+            request.setEndpoint('https://0eb6-103-186-18-196.ngrok-free.app/api/integration/salesforce/auth');
             request.setMethod('POST');
             request.setHeader('Content-Type', 'application/json');
             request.setHeader('Authorization', 'Bearer ' + apiKey);
